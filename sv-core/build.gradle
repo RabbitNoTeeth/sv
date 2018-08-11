@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'fun.bookish'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven{
+        url "http://maven.aliyun.com/nexus/content/groups/public/"
+    }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter:2.0.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-test:2.0.3.RELEASE'
+    compile fileTree(dir:'lib',include:['*.jar'])
+    compile 'io.vertx:vertx-core:3.5.3'
+    compile 'io.vertx:vertx-web:3.5.3'
+    compile 'io.vertx:vertx-web-client:3.5.3'
+    compile 'io.vertx:vertx-auth-common:3.2.1'
+    compile 'org.apache.commons:commons-lang3:3.7'
+}
