@@ -14,3 +14,19 @@ http:
   webRoot: dist           # 静态自愿根目录 (有默认值,可选配置ֵ)
   annoPermissions:        # 允许匿名访问的url (*ͨ通配所有,其余情况请使用精确路径,或者修改MyPermissionStrategyImpl重写权限校验规则)
     - POST:/login
+
+# -------------------------> spring环境配置
+spring:
+  profiles:
+    active: dev
+
+---
+# -------------------------> 开发环境
+spring:
+  profiles: dev
+
+---
+# -------------------------> 生产环境
+spring:
+  profiles: pro
+
