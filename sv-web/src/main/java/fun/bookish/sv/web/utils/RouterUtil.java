@@ -1,7 +1,7 @@
 package fun.bookish.sv.web.utils;
 
 import fun.bookish.sv.core.utils.SpringUtil;
-import fun.bookish.sv.web.router.SubRouter;
+import fun.bookish.sv.web.base.SubRouter;
 import io.vertx.ext.web.Router;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

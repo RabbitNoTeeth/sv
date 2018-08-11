@@ -1,4 +1,4 @@
-package fun.bookish.sv.web.router;
+package fun.bookish.sv.web.base;
 
 import io.vertx.ext.web.Router;
 
