@@ -1,5 +1,6 @@
 package fun.bookish.sv.web;
 
+import fun.bookish.sv.core.logger.MyLogger;
 import fun.bookish.sv.web.config.HttpProperties;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Vertx;
@@ -17,7 +18,7 @@ public class HttpServer {
     private final Vertx vertx;
     private final HttpProperties httpProperties;
 
-    private final Logger LOGGER = LoggerFactory.getLogger("sv-web");
+    private final MyLogger LOGGER = MyLogger.create("sv-web");
 
     @Autowired
     public HttpServer(Vertx vertx, HttpProperties httpProperties){

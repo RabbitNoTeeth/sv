@@ -1,5 +1,6 @@
 package fun.bookish.sv.web.verticle;
 
+import fun.bookish.sv.core.logger.MyLogger;
 import fun.bookish.sv.core.utils.SpringUtil;
 import fun.bookish.sv.web.auth.MyPermissionStrategyImpl;
 import fun.bookish.sv.web.auth.MySessionIdStrategyImpl;
@@ -17,8 +18,6 @@ import io.vertx.ext.web.Router;
 import io.vertx.ext.web.handler.BodyHandler;
 import io.vertx.ext.web.handler.CookieHandler;
 import io.vertx.ext.web.handler.StaticHandler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,7 @@ import java.util.List;
 public class HttpVerticle extends AbstractVerticle {
 
     private final HttpProperties httpProperties = SpringUtil.getBeanByClass(HttpProperties.class);
-    private final Logger LOGGER = LoggerFactory.getLogger("sv-web");
+    private final MyLogger LOGGER = MyLogger.create("sv-web");
 
     @Override
     public void start() throws Exception {
